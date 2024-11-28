@@ -4,11 +4,11 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-
-    alert('Hello MegaMinds');
+    
     GetData();
 })
 
+// for gate data
 function GetData() {
 
     $.ajax({
@@ -53,6 +53,8 @@ $('#ButtonAdd').click(function () {
     $('#Pmodel').modal('show');
 });
 
+
+//insert  record
 function Insert() {
     var output = new Object();
     output.id = $('#id').val();
@@ -78,7 +80,7 @@ function Insert() {
         }
     })
 }
-
+// for delete
 function Delete(id)
 {
     if (confirm('do you want to delete record'))
@@ -97,6 +99,7 @@ function Delete(id)
     }
 }
 
+// for edit
 function Edit(id)
 {
     $.ajax({
